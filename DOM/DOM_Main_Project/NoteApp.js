@@ -13,17 +13,21 @@ function updateCount() {
 function addNote() {
 
     // get the input
+    // .trim() removes spaces
     const text = input.value.trim();
     if(text == "") {
         alert("Input Cannot Be Empty");
         return;
     }
 
-    // create Note
+//     create Note
+//     <div class="note"></div>
+// This is your dynamic UI element
     const note = document.createElement("div");
     note.classList.add("note");
 
     // text span
+    // This holds the note text
     const span = document.createElement("span");
     span.innerText = text;
 
@@ -63,6 +67,7 @@ function addNote() {
 
 add.addEventListener("click", addNote);
 
+// Press Enter = same as clicking Add
 input.addEventListener("keypress", function(e) {
     if(e.key == "Enter") addNote();
 });
@@ -72,3 +77,9 @@ clear.addEventListener("click", function() {
     count = 0;
     updateCount();
 })
+
+// note (div)
+//  ├── span (text)
+//  └── button group
+//        ├── important
+//        └── delete
