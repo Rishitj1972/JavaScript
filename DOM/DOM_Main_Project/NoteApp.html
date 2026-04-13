@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .note {
+            padding: 10px;
+            margin: 10px 0;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .important {
+            background: yellow;
+            font-weight: bold;
+        }
+
+        button {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Notes App</h1>
+
+    <input type="text" id="noteInput" placeholder="Enter the Note"/>
+    <button id="addBtn">Add</button>
+    <button id="clearBtn">Clear</button>
+
+    <h3>Total Notes : <span id="count">0</span></h3>
+
+    <div id="noteContainer"></div>
+
+    <script src="NoteApp.js"></script>
+</body>
+</html>
